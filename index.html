@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Kandvan Valley Resort</title>
 </head>
 
 <body>
+
+
     <nav class="navbar " id="navbar">
         <div class="logo">
             <div class="logo-con">
@@ -20,6 +22,15 @@
                 <h4>Valley Resort</h4>
             </span>
         </div>
+        <div class="menu-icon" id="menu-icon">
+            <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
+                width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z" />
+            </svg>
+        </div>
         <ul class="nav-list">
             <li class="nav-list-itom"><a href="#home">HOME</a></li>
             <li class="nav-list-itom"><a href="#vila">VILLA</a></li>
@@ -28,6 +39,16 @@
             <li class="nav-list-itom"><a href="#testimonial">TESTIMONIALS</a></li>
             <li class="nav-list-itom"><a href="#contact">CONTACTS</a></li>
         </ul>
+        <div class="sidebar hidden" id="sidebar">
+            <ul class="side-list" id="navList">
+              <li class="side-list-itom"><a id="side-list-itom-a" href="#home">HOME</a></li>
+              <li class="side-list-itom"><a id="side-list-itom-a" href="#vila">VILLA</a></li>
+              <li class="side-list-itom"><a id="side-list-itom-a" href="#reservation">RESERVATION</a></li>
+              <li class="side-list-itom"><a id="side-list-itom-a" href="#gallery-head">GALLERY</a></li>
+              <li class="side-list-itom"><a id="side-list-itom-a" href="#testimonial">TESTIMONIALS</a></li>
+              <li class="side-list-itom"><a id="side-list-itom-a" href="#contact">CONTACTS</a></li>
+            </ul>
+          </div>
     </nav>
     <header id="banner">
         <div class="banner-content">
@@ -48,8 +69,6 @@
             </svg>
         </a>
     </header>
-
-    
 
     <section id="home">
         <div class="home-head">
@@ -158,56 +177,46 @@
             <p class="px-1">A well-designed villa will make you fall in love the moment you see it.</p>
             <p>Rs. 5,000/- (24 hrs checkout) | Rs. 1,000/- Extra Bed | Breakfast Incl.</p>
         </div>
-        <!-- <div class="res-div1"><input type="text" placeholder="Your Full Name"></div>
-        <div class="res-div2"><input type="tel" placeholder="Your Phone Number"></div>
-        <div class="res-div3"><select id="rating" name="rating" aria-placeholder="Number of guests" required>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select></div> -->
-        <!-- <div class="res-div4"></div>
-        <div class="res-div5"> </div>
-        <div class="res-div6"> </div>
-        <div class="res-div7"> </div>
-        </div> -->
-        <div class="first-row">
-            <div class="inp1"><input type="text" name="name" id="name" placeholder="Your Full Name"></div>
-            <div class="inp2"><input type="tel" name="phone" id="phone" placeholder="Your Phone Number"></div>
-            <div class="inp3">
-                <div class="custom-dropdown">
-                    <input type="number" name="guest" id="guest" placeholder="Number of Guest" list="list-number">
-                    <datalist id="list-number">
-                        <option value=1>
-                        <option value=2>
-                        <option value=3>
-                        <option value=4>
-                        <option value=5>
-                    </datalist>
-                </div>
+
+        <div class="res-parent">
+            <div class="res-div1"><input type="text" name="name" id="name" placeholder="Your Full Name"> </div>
+            <div class="res-div2"><input type="tel" name="phone" id="phone" placeholder="Your Phone Number"> </div>
+            <div class="res-div3"><input type="number" name="guest" id="guest" placeholder="Number of Guest"
+                    list="list-number">
+                <datalist id="list-number">
+                    <option value=1>
+                    <option value=2>
+                    <option value=3>
+                    <option value=4>
+                    <option value=5>
+                </datalist>
             </div>
+            <!-- <div class="res-div4"><input type="date" name="arrivel-date" id="arrivel-date" placeholder="Arrivel Date"> </div>
+            <div class="res-div5"><input type="date" name="dipparture-date" id="dipparture-date"
+                placeholder="Dipparture Date"> </div> -->
+
+            <div class="res-div4">
+                <input type="date" name="arrivel-date" id="arrivel-date">
+                <span class="date-placeholder">Arrival Date</span>
+            </div>
+
+            <div class="res-div5">
+                <input type="date" name="dipparture-date" id="dipparture-date">
+                <span class="date-placeholder">Departure Date</span>
+            </div>
+            <div class="res-div6"><input type="number" name="bed" id="bed" placeholder="Extra Bed" list="bed-number">
+                <datalist id="bed-number">
+                    <option value=1>
+                    <option value=2>
+                    <option value=3>
+                    <option value=4>
+                    <option value=5>
+                </datalist>
+            </div>
+            <div class="res-div7"><input class="btn" type="button" value="Book Me Now"> </div>
         </div>
 
 
-        <div class="second-row">
-            <div class="inp4"><input type="date" name="arrivel-date" id="arrivel-date" placeholder="Arrivel Date"></div>
-            <div class="inp5"><input type="date" name="dipparture-date" id="dipparture-date"
-                    placeholder="Dipparture Date"></div>
-            <div class="inp6">
-                <div class="custom-dropdown">
-                    <input type="number" name="bed" id="bed" placeholder="Extra Bed" list="bed-number">
-                    <datalist id="bed-number">
-                        <option value=1>
-                        <option value=2>
-                        <option value=3>
-                        <option value=4>
-                        <option value=5>
-                    </datalist>
-                </div>
-            </div>
-            <input class="btn" type="button" value="Book Me Now">
-        </div>
     </section>
 
     <section class="gallery-head" id="gallery-head">
@@ -236,56 +245,46 @@
     </section>
 
     <section class="contact" id="contact">
-        <div class="home-info-con">
+        <div class="home-head">
             <h1>CONTACT US</h1>
             <p class="px-1">If you have any questions, feedback or would like to book a trip,</p>
             <p>please contact us. We'll get back to you asap!</p>
         </div>
-        <div class="contact-con">
-            <div class="con-itom">
-                <div1>
-                    <div>
-                        <img src="/assets/map.png" alt="">
-                    </div>
-                    <h3>CONTACT</h3>
-                    <p> At post Kandvan,</p>
-                    <p> Taluka Shahuwadi,</p>
-                    <p> District Kolhapur</p>
-                </div1>
 
+        <div class="con-parent">
+            <div class="con-div1">
+                <div>
+                    <img src="/assets/map.png" alt="">
+                </div>
+                <h3>CONTACT</h3>
+                <p> At post Kandvan,</p>
+                <p> Taluka Shahuwadi,</p>
+                <p> District Kolhapur</p>
             </div>
-            <div class="con-itom">
-                <div1>
-                    <div>
-                        <img src="/assets/mobile.png" alt="">
-                    </div>
-                    <h3>PHONE</h3>
-                    <p>+91 82 629 33 977</p>
-                </div1>
-
+            <div class="con-div2">
+                <div>
+                    <img src="/assets/mobile.png" alt="">
+                </div>
+                <h3>PHONE</h3>
+                <p>+91 82 629 33 977</p>
             </div>
-            <div class="con-itom">
-                <div1>
-                    <div>
-                        <img src="/assets/paper-plane.png" alt="">
-                    </div>
-                    <h3>EMAIL</h3>
-                    <p>info@example.com</p>
-                </div1>
-
+            <div class="con-div3">
+                <div>
+                    <img src="/assets/paper-plane.png" alt="">
+                </div>
+                <h3>EMAIL</h3>
+                <p>info@example.com</p>
             </div>
-            <div class="con-itom">
-                <div1>
-                    <div>
-                        <img src="/assets/network.png" alt="">
-                    </div>
-                    <h3>SOCIAL</h3>
-                    <p>Connect with us:</p>
-                    <p><a href="#" class="fa fa-facebook"></a><a href="#" class="fa fa-instagram"></a> </p>
-                </div1>
-
+            <div class="con-div4">
+                <div>
+                    <img src="/assets/network.png" alt="">
+                </div>
+                <h3>SOCIAL</h3>
+                <p>Connect with us:</p>
+                <p><a href="#" class="fa fa-facebook"></a><a href="#" class="fa fa-instagram"></a> </p>
             </div>
         </div>
+
     </section>
 
 
