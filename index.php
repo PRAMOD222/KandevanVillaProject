@@ -176,6 +176,7 @@
             Rs. 5,000/- (24 hrs checkout) | Rs. 1,000/- Extra Bed | Breakfast Incl.</p>
         </div>
 
+        <form action="formsubmit.php" method="post">
         <div class="res-parent">
             <div class="res-div1"><input type="text" name="name" id="name" placeholder="Your Full Name"> </div>
             <div class="res-div2"><input type="tel" name="phone" id="phone" placeholder="Your Phone Number"> </div>
@@ -194,12 +195,12 @@
                 placeholder="Dipparture Date"> </div> -->
 
             <div class="res-div4">
-                <input placeholder="Arrivel Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                <input name="arrival" placeholder="Arrivel Date" class="textbox-n" type="text" onfocus="(this.type='date')"
                     onblur="(this.type='text')" id="date" />
             </div>
 
             <div class="res-div5">
-                <input placeholder="Dipparture Date" class="textbox-n" type="text" onfocus="(this.type='date')"
+                <input name="departure" placeholder="Dipparture Date" class="textbox-n" type="text" onfocus="(this.type='date')"
                     onblur="(this.type='text')" id="date" />
             </div>
             <div class="res-div6"><input type="number" name="bed" id="bed" placeholder="Extra Bed" list="bed-number">
@@ -211,8 +212,9 @@
                     <option value=5>
                 </datalist>
             </div>
-            <div class="res-div7"><input class="btn" type="button" value="Book Me Now"> </div>
+            <div class="res-div7"><input class="btn" type="submit" value="Book Me Now"> </div>
         </div>
+    </form>
 
 
     </section>

@@ -474,6 +474,7 @@ a {
 
 .res-parent input[type="text"],
 .res-parent input[type="tel"],
+.res-parent input[type="date"],
 .res-parent input[type="number"]{
   width: 100%;
   padding: 10px;
@@ -484,7 +485,7 @@ a {
   background-color: rgb(236, 236, 236);
   border: 1px solid gray;
 }
-.res-parent input[type="button"]{
+.res-parent input[type="submit"]{
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
