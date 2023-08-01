@@ -7,7 +7,7 @@ const navbar = document.getElementById("navbar");
 const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const dateInputs = document.querySelectorAll('input[type="date"]');
-
+const arrivelDate = document.getElementById("arrivel-date")
 
 
 dateInputs.forEach(input => {
@@ -84,3 +84,7 @@ document.addEventListener('click', (event) => {
     sidebar.classList.add('hidden');
   }
 });
+
+arrivelDate.addEventListener("click", ()=> {
+  arrivelDate.inputMode = Date
+})

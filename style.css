@@ -1,10 +1,11 @@
 /* Add your general styles here */
-body {
+body, * {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+
 
 a {
   text-decoration: none;
@@ -202,18 +203,19 @@ a {
   margin-top: 10vh;
 }
 
-.home-head h1 {
-  width: 20vw;
+.home-head h2 {
+  width: 100%;
   margin: 1rem auto;
   font-size: 2.6rem;
+  text-align: center;
 }
 
 .home-head p {
-  display: flex;
-  justify-content: center;
-  width: 60vw;
+  width: 100%;
   margin: 0.4rem auto;
   font-size: 1.2rem;
+  text-align: center;
+  padding: 2% 5%;
 }
 
 .px-1 {
@@ -232,7 +234,7 @@ a {
 
 
 
-.home-info-con h1 {
+.home-info-con h2 {
   display: flex;
   justify-content: center;
   font-size: 2.5rem;
@@ -244,6 +246,8 @@ a {
   display: flex;
   justify-content: center;
   color: rgb(34, 34, 34);
+  text-align: center;
+  margin: 2% 5%;
 }
 
 .grid-con {
@@ -327,7 +331,7 @@ a {
 }
 
 @media (max-width: 768px) {
-  .home-head h1 {
+  .home-head h2 {
     width: 90vw;
     margin: 1rem auto;
     font-size: 1.5rem;
@@ -355,7 +359,7 @@ a {
     width: 100%;
     overflow-y: hidden;
   }
-  .home-info-con h1 {
+  .home-info-con h2 {
     padding: 0 20px;
     font-size: large;
     text-align: center;
@@ -424,6 +428,7 @@ a {
     .div4 { grid-area: 5 / 1 / 7 / 2; }
     .div5 { grid-area: 5 / 2 / 7 / 3; }
   }
+
   /* styles for reservation section  */
   
 .res-div1 {
@@ -469,9 +474,7 @@ a {
 
 .res-parent input[type="text"],
 .res-parent input[type="tel"],
-.res-parent input[type="number"],
-.res-parent input[type="date"],
-.res-parent input[type="button"] {
+.res-parent input[type="number"]{
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -480,6 +483,23 @@ a {
   outline: none;
   background-color: rgb(236, 236, 236);
   border: 1px solid gray;
+}
+.res-parent input[type="button"]{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 3rem;
+  appearance: none;
+  outline: none;
+  border: 1px solid gray;
+}
+.btn{
+  background-color: white !important;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(41, 41, 41) !important;
+  color: white;
 }
 
 .res-div6 input[type="number"]::-webkit-inner-spin-button,
@@ -501,10 +521,11 @@ a {
   margin-top: 10vh;
 }
 
-.res-head h1 {
-  width: 34vw;
+.res-head h2 {
+  width: 100%;
   margin: 1rem auto;
   font-size: 2.6rem;
+  text-align: center;
 }
 
 .res-head p {
@@ -513,6 +534,7 @@ a {
   width: 60vw;
   margin: 0.4rem auto;
   font-size: 1.2rem;
+  text-align: center;
 }
 .res-div4,
 .res-div5 {
@@ -528,12 +550,12 @@ a {
   pointer-events: none;
 }
 
-input[type="date"]::-webkit-datetime-edit-text,
+/* input[type="date"]::-webkit-datetime-edit-text,
 input[type="date"]::-webkit-datetime-edit-month-field,
 input[type="date"]::-webkit-datetime-edit-day-field,
 input[type="date"]::-webkit-datetime-edit-year-field {
   color: transparent;
-}
+} */
 
 
 @media (max-width: 768px){
@@ -541,7 +563,7 @@ input[type="date"]::-webkit-datetime-edit-year-field {
     margin-top: 10vh;
   }
   
-  .res-head h1 {
+  .res-head h2 {
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -701,4 +723,30 @@ input[type="date"]::-webkit-datetime-edit-year-field {
 
 .fa-instagram {
   color: rgb(253, 95, 42);
+}
+
+footer{
+  padding: 5%;
+  border-top: 1px solid #0f0f0f;
+
+}
+
+footer .fbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .fbox p{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px){
+  footer .fbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
